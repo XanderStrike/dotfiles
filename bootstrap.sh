@@ -2,7 +2,7 @@
 
 if [ ! -z "${SPIN}" ]; then
   sudo apt install -y ripgrep fd-find neovim
-  cp ./dots/* "${HOME}/"
+  cat ./addtorc >> "${HOME}/.zshrc"
 
   [ ! -f "${HOME}/.config/nvim" ] && sh -c "$(git clone https://github.com/luan/nvim ~/.config/nvim)"
 
