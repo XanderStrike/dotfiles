@@ -4,3 +4,4 @@ EDITOR='vim'
 
 alias fd='fdfind'
 alias be='bundle exec'
+alias so='open http://$SPIN_FQDN'
