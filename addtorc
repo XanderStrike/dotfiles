@@ -1,6 +1,6 @@
 #!/bin/sh
 
-EDITOR='vim'
+EDITOR='neovim'
 
 alias fd='fdfind'
 alias be='bundle exec'
