@@ -1,6 +1,6 @@
 #!/bin/sh
 
-EDITOR='neovim'
+EDITOR='code --wait'
 
 alias fd='fdfind'
 alias be='bundle exec'
