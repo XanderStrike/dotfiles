@@ -1,6 +1,6 @@
 [submodule "shell-commands/br-bash"]
 	path = shell-commands/br-bash
-	url = git@github.com:XanderStrike/br-bash.git
+	url = https://github.com/XanderStrike/br-bash.git
 [submodule "shell-commands/ai-completion"]
 	path = shell-commands/ai-completion
-	url = git@github.com:XanderStrike/ai-completion.git
+	url = https://github.com:XanderStrike/ai-completion.git
