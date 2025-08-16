@@ -17,10 +17,13 @@ update_dotfiles() {
 
 # Check that the dotfiles directory exists
 if [ -d "$DOTFILES_DIR" ]; then
-    # Source files
-    source "${DOTFILES_DIR}/aliases.sh"
-    source "${DOTFILES_DIR}/shell-commands/ai-completion/ai-completion.sh"
-    source "${DOTFILES_DIR}/shell-commands/br-bash/br.sh"
+    # Source files if they exist
+    for file in \
+        "${DOTFILES_DIR}/aliases.sh" \
+        "${DOTFILES_DIR}/shell-commands/ai-completion/ai-completion.sh" \
+        "${DOTFILES_DIR}/shell-commands/br-bash/br.sh"; do
+        [ -r "$file" ] && source "$file"
+    done
     
     # Run update in background, suppressing the background PID/job message
     if [ "$SKIP_BACKGROUND_UPDATE" != "1" ]; then
