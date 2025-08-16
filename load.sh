@@ -21,6 +21,7 @@ if [ -d "$DOTFILES_DIR" ]; then
     for file in \
         "${DOTFILES_DIR}/aliases.sh" \
         "${DOTFILES_DIR}/functions.sh" \
+        "${DOTFILES_DIR}/env.sh" \
         "${DOTFILES_DIR}/shell-commands/ai-completion/ai-completion.sh" \
         "${DOTFILES_DIR}/shell-commands/br-bash/br.sh"; do
         [ -r "$file" ] && source "$file"
