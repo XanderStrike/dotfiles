@@ -21,10 +21,21 @@ if [ -d "$DOTFILES_DIR" ]; then
     for file in \
         "${DOTFILES_DIR}/aliases.sh" \
         "${DOTFILES_DIR}/functions.sh" \
-        "${DOTFILES_DIR}/env.sh" \
-        "${DOTFILES_DIR}/shell-commands/ai-completion/ai-completion.sh" \
-        "${DOTFILES_DIR}/shell-commands/br-bash/br.sh"; do
+        "${DOTFILES_DIR}/env.sh"; do
         [ -r "$file" ] && source "$file"
+    done
+
+    # Source submodule scripts - prefer ~/workspace/<repo>/ if it exists,
+    # otherwise fall back to the submodule in dotfiles
+    _shell_cmds_dir="${DOTFILES_DIR}/shell-commands"
+    for entry in "ai-completion:ai-completion.sh" "br-bash:br.sh"; do
+        subdir="${entry%%:*}"
+        script="${entry##*:}"
+        if [ -r "$HOME/workspace/$subdir/$script" ]; then
+            source "$HOME/workspace/$subdir/$script"
+        elif [ -r "$_shell_cmds_dir/$subdir/$script" ]; then
+            source "$_shell_cmds_dir/$subdir/$script"
+        fi
     done
     
     # Run update in background, suppressing the background PID/job message
