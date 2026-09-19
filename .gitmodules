@@ -4,3 +4,6 @@
 [submodule "shell-commands/ai-completion"]
 	path = shell-commands/ai-completion
 	url = https://github.com:XanderStrike/ai-completion.git
+[submodule "shell-commands/kagcli"]
+	path = shell-commands/kagcli
+	url = https://git.standke.dev/xanderstrike/kagcli.git
