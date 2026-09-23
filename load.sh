@@ -28,7 +28,7 @@ if [ -d "$DOTFILES_DIR" ]; then
     # Source submodule scripts - prefer ~/workspace/<repo>/ if it exists,
     # otherwise fall back to the submodule in dotfiles
     _shell_cmds_dir="${DOTFILES_DIR}/shell-commands"
-    for entry in "ai-completion:ai-completion.sh" "br-bash:br.sh" "kagcli:kagi.sh"; do
+    for entry in "ai-completion:ai-completion.sh" "br-bash:br.sh" "kagcli:kagi.sh" "searxcli:searxng.sh"; do
         subdir="${entry%%:*}"
         script="${entry##*:}"
         if [ -r "$HOME/workspace/$subdir/$script" ]; then

@@ -7,3 +7,6 @@
 [submodule "shell-commands/kagcli"]
 	path = shell-commands/kagcli
 	url = https://git.standke.dev/xanderstrike/kagcli.git
+[submodule "shell-commands/searxcli"]
+	path = shell-commands/searxcli
+	url = ssh://git@git.standke.dev:222/xanderstrike/searxcli.git
